@@ -3,294 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Informática - Assistência Técnica de Confiança</title>
+    <title>NEW TECH - Assistência Técnica de Confiança</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <style>
-        /* --- Estilos Gerais e Reset --- */
-        :root {
-            --cor-primaria: #0056b3; /* Azul escuro para confiança */
-            --cor-secundaria: #ffc107; /* Amarelo para destaque e ação */
-            --cor-fundo: #f4f4f4;
-            --cor-texto: #333;
-            --cor-branco: #ffffff;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--cor-texto);
-            background-color: var(--cor-fundo);
-        }
-
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* --- Cabeçalho --- */
-        .header {
-            background-color: var(--cor-branco);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--cor-primaria);
-            text-decoration: none;
-        }
-
-        .logo i {
-            margin-right: 8px;
-        }
-
-        .nav-menu ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--cor-texto);
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: var(--cor-primaria);
-        }
-
-        /* --- Seção Inicial (Hero) --- */
-        .hero {
-            background-color: var(--cor-primaria);
-            color: var(--cor-branco);
-            text-align: center;
-            padding: 160px 20px 100px 20px;
-            margin-top: 60px; /* Espaço para o cabeçalho fixo */
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            background-color: var(--cor-secundaria);
-            color: var(--cor-texto);
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-        
-        .whatsapp-button i {
-            margin-right: 10px;
-        }
-
-        /* --- Seções Padrão --- */
-        .section {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 36px;
-            margin-bottom: 50px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background-color: var(--cor-primaria);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* --- Seção de Serviços --- */
-        #servicos {
-            background-color: var(--cor-branco);
-        }
-
-        .servicos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            text-align: left;
-        }
-
-        .servico-item {
-            background-color: var(--cor-fundo);
-            padding: 30px;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .servico-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .servico-item i {
-            font-size: 40px;
-            color: var(--cor-primaria);
-            margin-bottom: 20px;
-        }
-
-        .servico-item h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        
-        /* --- Seção Sobre (Diferenciais) --- */
-        .diferenciais-grid {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .diferencial-item {
-            max-width: 250px;
-        }
-
-        .diferencial-item i {
-            font-size: 48px;
-            color: var(--cor-primaria);
-            margin-bottom: 15px;
-        }
-        
-        .diferencial-item h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        /* --- Seção Depoimentos --- */
-        #depoimentos {
-             background-color: var(--cor-branco);
-        }
-
-        .depoimentos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .depoimento-card {
-            background-color: var(--cor-fundo);
-            padding: 30px;
-            border-left: 5px solid var(--cor-primaria);
-            text-align: left;
-            border-radius: 5px;
-        }
-
-        .depoimento-card .quote {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .depoimento-card .author {
-            font-weight: 700;
-        }
-
-        /* --- Seção Contato --- */
-        #contato {
-            background-color: var(--cor-primaria);
-            color: var(--cor-branco);
-        }
-        
-        #contato .section-title::after {
-            background-color: var(--cor-secundaria);
-        }
-        
-        #contato p {
-            max-width: 600px;
-            margin: -20px auto 40px auto;
-        }
-
-        /* --- Rodapé --- */
-        .footer {
-            background-color: #222;
-            color: var(--cor-branco);
-            text-align: center;
-            padding: 20px 0;
-        }
-        
-        /* --- Responsividade --- */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none; /* Em um site real, isso seria um menu "hambúrguer" */
-            }
-            .hero h1 {
-                font-size: 36px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
-            .section-title {
-                font-size: 28px;
-            }
-        }
-
-    </style>
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <a href="#inicio" class="logo"><i class="fas fa-bolt"></i>Super Informática</a>
+            <a href="#inicio" class="logo">
+                <img src="logo.png" alt="Logo NEW TECH">
+            </a>
             <nav class="nav-menu">
                 <ul>
                     <li><a href="#inicio">Início</a></li>
@@ -304,11 +34,17 @@
 
     <main>
         <section id="inicio" class="hero">
-            <h1>Seu computador quebrou? Nós temos a solução.</h1>
-            <p>Serviço de assistência técnica rápido, confiável e com preço justo para computadores e notebooks.</p>
-            <a href="https://api.whatsapp.com/send?phone=5535991365586" target="_blank" class="cta-button whatsapp-button">
-                <i class="fab fa-whatsapp"></i>Solicite um Orçamento Grátis
-            </a>
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="background-video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos em HTML5.
+            </video>
+            <div class="hero-content">
+                <h1>Seu computador quebrou? Nós temos a solução.</h1>
+                <p>Serviço de assistência técnica rápido, confiável e com preço justo para computadores e notebooks.</p>
+                <a href="https://api.whatsapp.com/send?phone=5535991365586" target="_blank" class="cta-button whatsapp-button">
+                    <i class="fab fa-whatsapp"></i>Solicite um Orçamento Grátis
+                </a>
+            </div>
         </section>
 
         <section id="servicos" class="section">
@@ -341,7 +77,7 @@
 
         <section id="sobre" class="section">
             <div class="container">
-                <h2 class="section-title">Por que escolher a Super Informática?</h2>
+                <h2 class="section-title">Por que escolher a NEW TECH?</h2>
                 <div class="diferenciais-grid">
                     <div class="diferencial-item">
                         <i class="fas fa-user-shield"></i>
@@ -391,7 +127,7 @@
             <div class="container">
                 <h2 class="section-title">Seu computador precisa de ajuda?</h2>
                 <p>Não deixe um problema pequeno virar uma grande dor de cabeça. Entre em contato conosco agora mesmo e solicite uma avaliação!</p>
-                <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" target="_blank" class="cta-button whatsapp-button">
+                <a href="https://api.whatsapp.com/send?phone=5535991365586" target="_blank" class="cta-button whatsapp-button">
                     <i class="fab fa-whatsapp"></i>Falar com um Especialista
                 </a>
             </div>
@@ -400,8 +136,12 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Super Informática. Todos os direitos reservados.</p>
+        <p>&copy; 2025 NEW TECH. Todos os direitos reservados.</p>
     </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=5535991365586" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
